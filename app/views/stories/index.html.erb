@@ -22,7 +22,7 @@
         </div>
       </div>
       <div class="panel-body row">
-        <%= story.created_by.email %>
+          Created by <%= story.created_by.name %>
         <div class="pull-right">
           Created about <%= time_ago_in_words(story.created_at) %> ago
         </div>
