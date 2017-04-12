@@ -26,10 +26,16 @@ gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
 
 gem 'kaminari'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
+
+# Shrine Gem for image uploading
+gem 'shrine'
+gem 'shrine-sql'
+gem 'roda'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
