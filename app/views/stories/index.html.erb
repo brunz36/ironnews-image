@@ -14,8 +14,8 @@
 
     <div class="media">
       <div class="media-left">
-        <% if story.image_url %>
-          <%= image_tag(story.image_url, size: "50") %>
+        <% if story.image_url(:thumbnail) %>
+          <%= image_tag(story.image_url(:thumbnail)) %>
         <% else %>
           <%= image_tag("tiy_logo_1.png", size: "50") %>
         <% end %>

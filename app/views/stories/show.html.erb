@@ -21,10 +21,22 @@
 
     <dt>Url link:</dt>
     <dd><%= link_to @story.url_link, @story.url_link %></dd>
+
+    <dt>Email:</dt>
+    <dd><%= @story.created_by.email %></dd>
   </h3>
+  <div class="row">
+    <%= image_tag(@story.image_url(:small)) %>
+    <a href="#" class="btn btn-default btn-lg active" role="button">Original</a>
+    <a href="#" class="btn btn-default btn-lg active" role="button">Large</a>
+    <a href="#" class="btn btn-default btn-lg active" role="button">Medium</a>
+    <a href="#" class="btn btn-default btn-lg active" role="button">Small</a>
+
+  </div>
+
 </dl>
 
-<h2>Comments</h2>
+<h3>Comments</h3>
   <% @story.comments.each do |comment| %>
     <p>
       <strong><%= comment.created_by.name %>: </strong>
@@ -32,7 +44,7 @@
     </p>
   <% end %>
 
-<h2>Add a comment:</h2>
+<h3>Add a comment:</h3>
   <%= form_for([@story, @story.comments.build]) do |f| %>
     <p>
       <%= f.label :body %><br>
@@ -42,3 +54,9 @@
       <%= f.submit class: "btn btn-inverse"%>
     </p>
   <% end %>
+
+<%= image_tag(@story.image_url(:original)) %>
+<%= image_tag(@story.image_url(:large)) %>
+<%= image_tag(@story.image_url(:medium)) %>
+<%= image_tag(@story.image_url(:small)) %>
+<%= image_tag(@story.image_url(:thumbnail)) %>

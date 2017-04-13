@@ -36,6 +36,8 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'shrine'
 gem 'shrine-sql'
 gem 'roda'
+gem 'image_processing'
+gem 'mini_magick', '>= 4.3.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
