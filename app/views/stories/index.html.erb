@@ -30,11 +30,11 @@
           </div></h4>
           <% end %>
         </div>
-        <br>
-        <br>
-        Created by <%= story.created_by.name %> about <%= time_ago_in_words(story.created_at) %> ago.
+          <br>
+          <br>
+          Created by <%= story.created_by.name %> <%= time_ago_in_words(story.created_at) %> ago.
       </div>
-      <hr>
+        <hr>
     </div>
   <% end %>
 </div>

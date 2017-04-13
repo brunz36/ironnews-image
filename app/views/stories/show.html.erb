@@ -25,8 +25,18 @@
     <dt>Email:</dt>
     <dd><%= @story.created_by.email %></dd>
 
-    <br><dt>Image:</dt>
-    <dd><%=link_to image_tag(@story.image_url(:small)), @story.image_url(:large) %></dd>
+    <br><dt>Images:</dt>
+    <dd>
+      <% if @story.image_url(:original) %>
+        <%= image_tag(@story.image_url(:small)) %>
+        <a href="<%= @story.image_url(:thumbnail)%>" class="btn btn-default btn-lg" role="button">Thumbnail</a>
+        <a href="<%= @story.image_url(:original)%>" class="btn btn-default btn-lg" role="button">Original</a>
+        <a href="<%= @story.image_url(:large)%>" class="btn btn-default btn-lg" role="button">Large</a>
+        <a href="<%= @story.image_url(:small)%>" class="btn btn-default btn-lg" role="button">Small</a>
+      <% else %>
+        <button type="button" class="btn btn-default btn-lg active">Button</button>
+      <% end %>
+    </dd>
   </h3>
 </dl>
 
@@ -48,8 +58,3 @@
       <%= f.submit class: "btn btn-inverse"%>
     </p>
   <% end %>
-
-
-  <div class="row">
-    <%=link_to image_tag(@story.image_url(:small)), @story.image_url(:thumbnail) %>
-  </div>
