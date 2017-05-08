@@ -1,24 +1,21 @@
-# README
+# IronNews
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### TIY Week 5 Day 3 &dash; Cohort 7
 
-Things you may want to cover:
+### **[The Iron Yard](http://theironyard.com)** Cohort 7 &dash; Ruby On Rails Back-End Engineer
 
-* Ruby version
+- This application shows the use of the following technologies:
+  - Ruby
+  - Rails
+  - Postgress
+  - Active Records
+  - Bootstrap
+  - Shrine & ImageMagick Gems
+  - Kaminari
+- The major features of the application are:
+  - Dynamic Web pages
+  - Record Association
+  - Image Processing
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## DEMO
+![](https://raw.githubusercontent.com/brunz36/ironnews-image/master/app/assets/images/ironnews-image.gif)
